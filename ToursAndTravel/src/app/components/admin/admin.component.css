@@ -1,0 +1,187 @@
+.main {
+  background-color: rgb(204, 204, 192);
+}
+
+.admin-header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.admin-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  background-color: #ffffffc7;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffffffc7;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.manage-packages {
+  padding: 2rem;
+  /* background-color: #ffffffc7; */
+  color: #333;
+}
+
+.manage-packages .heading {
+  text-align: center;
+  /* font-size: ; */
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+
+.crud-container {
+  position: relative;
+  background-color: #ffffffc7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.crud-container form h3 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.crud-container form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.crud-container form .btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.crud-container form .btn:hover {
+  background-color: rgba(45, 44, 44, 0.5);
+}
+
+.close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #c95151;
+  transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+  color: #a13939;
+  /* Adjust color on hover as desired */
+}
+
+#package-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax width as needed */
+  gap: 2.5rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-item {
+  background-color: #ffffffa1;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px; /* Adjust max-width as needed */
+  margin-bottom: 1rem; /* Adjust margin-bottom to control vertical gap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tour-item:hover {
+  transform: translateY(-5px);
+}
+
+.tour-item img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.tour-item-content {
+  padding: 1rem;
+}
+
+.tour-item h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.tour-item p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.tour-item button {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px;
+}
+
+.tour-item button:hover {
+  background-color: rgba(45, 44, 44, 0.5);
+}

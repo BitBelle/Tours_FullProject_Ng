@@ -1,0 +1,52 @@
+<section class="booking">
+  <h2>Book Tour</h2>
+  <div class="booking-form">
+    <form (ngSubmit)="bookTour()" [formGroup]="bookingForm">
+      <div class="form-group">
+        <label for="tourName">Tour Name:</label>
+        <select id="tourName" formControlName="tour_Name" required>
+          <option *ngFor="let tour of tours" [value]="tour.tour_Name">{{ tour.tour_Name }}</option>
+        </select>
+        <small *ngIf="bookingForm.get('tour_Name')?.invalid && bookingForm.get('tour_Name')?.touched">Tour is required</small>
+      </div>
+      <div class="form-group">
+        <label for="tourId">Tour Id:</label>
+        <select id="tourId" formControlName="tour_Id" required>
+          <option *ngFor="let tour of tours" [value]="tour.tour_Id">{{tour.tour_Name}} - {{ tour.tour_Id}}</option>
+        </select>
+        <small *ngIf="bookingForm.get('tour_Id')?.invalid && bookingForm.get('tour_Id')?.touched">TourId is required</small>
+      </div>
+      <!-- <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" formControlName="user_Name" required>
+        <small *ngIf="bookingForm.get('user_Name')?.invalid && bookingForm.get('user_Name')?.touched">Full Name is required</small>
+      </div> -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="user_Email" required>
+        <small *ngIf="bookingForm.get('user_Email')?.invalid && bookingForm.get('user_Email')?.touched">Valid Email is required</small>
+      </div>
+      <div class="form-group">
+        <label for="hotelName">Hotel:</label>
+        <select id="hotelName" formControlName="hotel_Name" required>
+          <option *ngFor="let hotel of hotels" [value]="hotel.hotel_Id">{{ hotel.hotel_Name }} - {{ hotel.hotel_Location }}</option>
+        </select>
+        <small *ngIf="bookingForm.get('hotel_Name')?.invalid && bookingForm.get('hotel_Name')?.touched">Hotel is required</small>
+      </div>
+      <div class="form-group">
+        <label for="hotelId">Hotel Id:</label>
+        <select id="hotelId" formControlName="hotel_Id" required>
+          <option *ngFor="let hotel of hotels" [value]="hotel.hotel_Id">{{ hotel.hotel_Name }} - {{ hotel.hotel_Id }}</option>
+        </select>
+        <small *ngIf="bookingForm.get('hotel_Id')?.invalid && bookingForm.get('hotel_Id')?.touched">Hotel is required</small>
+      </div>
+      <div class="form-group">
+        <label for="date">Tour Date:</label>
+        <input type="date" id="date" formControlName="booking_Date" required>
+        <small *ngIf="bookingForm.get('booking_Date')?.invalid && bookingForm.get('booking_Date')?.touched">Tour Date is required</small>
+      </div>
+      <button type="submit" [disabled]="bookingForm.invalid">Confirm Booking</button>
+    </form>
+  </div>
+</section>
+<router-outlet></router-outlet>
